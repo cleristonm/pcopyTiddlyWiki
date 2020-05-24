@@ -25,8 +25,8 @@ from datetime import datetime
 import shutil
 
 def diff_days(d_recent, d_old):
-	d1 = datetime.fromtimestamp(d_recent/ 1000 )
-	d2 = datetime.fromtimestamp(d_old / 1000 )
+	d1 = datetime.fromtimestamp(d_recent)
+	d2 = datetime.fromtimestamp(d_old )
 
 	return (d1-d2).days
 
