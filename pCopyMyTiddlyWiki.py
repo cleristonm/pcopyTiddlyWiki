@@ -37,6 +37,8 @@ tw_downloaded_files_name_pattern = tw_download+tw_file.split( '.')[0]+'*.'+tw_fi
 mtime_tw_file = os.path.getmtime(tw_dir+tw_file)
 
 tw_downloaded_files = glob.glob(tw_downloaded_files_name_pattern)
+tw_downloaded_files.sort(key=os.path.getmtime, reverse=True)
+
 
 for i in range(0, len(tw_downloaded_files)):
 	mtime_downloaded_file = os.path.getmtime(tw_downloaded_files[i]) 		
